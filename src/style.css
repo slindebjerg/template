@@ -1,0 +1,256 @@
+:root {
+  /* Color Tokens */
+  --color-primary-100: #f4e6e9;
+  --color-primary-200: #E8B3C2;
+  --color-primary-300: #8e354f;
+  --color-primary-400: #5B2333;
+  --color-primary-500: #421925;
+
+  --color-secondary-100: #eae7e6;
+  --color-secondary-200: #c2b8b4;
+  --color-secondary-300: #897d78;
+  --color-secondary-400: #564d4a;
+  --color-secondary-500: #332e2c;
+
+  --color-accent-100: #fde8e7;
+  --color-accent-200: #fa7e61;
+  --color-accent-300: #f24333;
+  --color-accent-400: #ba1b1d;
+  --color-accent-500: #8a1416;
+
+  --color-success-100: #e6f4e6;
+  --color-success-200: #99d899;
+  --color-success-300: #4cb24c;
+  --color-success-400: #008000;
+  --color-success-500: #004d00;
+
+  --color-warning-100: #fff3e0;
+  --color-warning-200: #ffe0b2;
+  --color-warning-300: #ffb74d;
+  --color-warning-400: #FFA500;
+  --color-warning-500: #e65100;
+
+  --color-neutral-100: #f7f4f3;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #cccccc;
+  --color-neutral-400: #777777;
+  --color-neutral-500: #333333;
+
+  /* Typography */
+  --font-family-base: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-loose: 1.75;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;   /* 4px */
+  --spacing-2: 0.5rem;    /* 8px */
+  --spacing-3: 0.75rem;   /* 12px */
+  --spacing-4: 1rem;      /* 16px */
+  --spacing-6: 1.5rem;    /* 24px */
+  --spacing-8: 2rem;      /* 32px */
+  --spacing-12: 3rem;     /* 48px */
+  --spacing-16: 4rem;     /* 64px */
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-base: 0.5rem;  /* 8px */
+  --radius-lg: 1rem;      /* 16px */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-base: all 0.2s ease-in-out;
+  --transition-slow: all 0.3s ease-in-out;
+  --transition-fast: all 0.1s ease-in-out;
+
+  /* Z-index */
+  --z-negative: -1;
+  --z-elevate: 1;
+  --z-sticky: 100;
+  --z-drawer: 200;
+  --z-dropdown: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-toast: 600;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-neutral-500);
+  background-color: var(--color-neutral-100);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-4);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p {
+  margin-bottom: var(--spacing-4);
+}
+
+/* Links */
+a {
+  color: var(--color-primary-400);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-primary-300);
+  text-decoration: underline;
+}
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Utility Classes */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+.text-primary { color: var(--color-primary-400); }
+.text-secondary { color: var(--color-secondary-400); }
+.text-accent { color: var(--color-accent-400); }
+.text-success { color: var(--color-success-400); }
+.text-warning { color: var(--color-warning-400); }
+.text-danger { color: var(--color-accent-400); }
+
+.bg-primary { background-color: var(--color-primary-400); }
+.bg-secondary { background-color: var(--color-secondary-400); }
+.bg-accent { background-color: var(--color-accent-400); }
+.bg-success { background-color: var(--color-success-400); }
+.bg-warning { background-color: var(--color-warning-400); }
+.bg-danger { background-color: var(--color-accent-400); }
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--accent-text-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--accent-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.primary-color {
+  color: #5B2333;
+}
+
+.secondary-color {
+  color: #564d4a;
+}
+
+.accent-color {
+  color: #E8B3C2;
+}
+
+.accent-color-2 {
+  color: #f24333;
+}
+
+.danger-color {
+  color: #ba1b1d;
+}
+
+.success-color {
+  color: #008000;
+}
+
+.warning-color {
+  color: #FFA500;
+}
+
+.info-color {
+  color: #fa7e61;
+}
+
+.background-color {
+  background-color: #f7f4f3;
+}
+
+.primary-text-color {
+  color: #333;
+}
+
+.secondary-text-color {
+  color: #777;
+}
+
+.accent-text-color {
+  color: #f7f4f3;
+}
+
+.danger-text-color {
+  color: #ba1b1d;
+}
